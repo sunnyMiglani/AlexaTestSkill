@@ -2,6 +2,14 @@
 
 var Alexa = require("alexa-sdk");
 
+/*
+  TODO: 
+  Basically create your own API for the aws comprehend / any other api
+  should be as simpe as putting those API functions in an module.exports { } section.
+  then doing a "require" from the main file (this one).
+
+*/
+
 var handlers = {
   'LaunchRequest': function() {
     this.response.speak("Hello, welcome to Potato Timer! This is a placeholder skill to test timers and watson. Ask for help if you want to know more!").listen("You can say things like start timer or ask watson!");
@@ -39,7 +47,7 @@ var handlers = {
   },
 
 
- //this is a test comment! 
+ //this is a test comment!
 
   // This is a placeholder to stop the timer!
   'TimerStopIntent': function(){
@@ -49,6 +57,7 @@ var handlers = {
 
   // This is a placeholder to ask questions!
   'AskWatson' : function(){
+    //some code
     this.response.speak("Would ask watson something! ");
     this.emit(':responseReady');
   }
