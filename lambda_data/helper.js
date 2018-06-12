@@ -16,13 +16,15 @@ module.exports = {
         var py = spawn('python', ['detectEntities.py']);
         var outputString = "starting string";
         
-        py.stdout.on('data', function (data) {
+        console.log("hello its' meee");
+        py.stdout.on('data', function(data){
             console.log("Getting information from the python script! ");
             outputString += data.toString();
             console.log(outputString);
         });
         
-
+        console.log("output : " + outputString);
+        console.log("Before the end ");
         py.stdout.on('end', function () {
             console.log("My output : " + outputString);
         });
