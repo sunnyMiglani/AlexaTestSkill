@@ -28,10 +28,10 @@ var handlers = {
   'AskWatson': function () {
     // this.response.speak("Let me ask my friend Watson!");
     // var localCheck = HelperFunctions.checkLocal();
-    var returnString = HelperFunctions.getEntities();
-    console.log(returnString);
-    this.response.speak(returnString);
-    this.emit(':responseReady');
+    HelperFunctions.getEntities(function(returnString,that){
+      that.response.speak(returnString);
+      that.emit(':responseReady');
+    }, this);
   }
 
 };
