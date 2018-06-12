@@ -2,14 +2,6 @@
 const Alexa = require('alexa-sdk');
 var HelperFunctions = require("./helper.js");
 
-/*
-  TODO: 
-  Basically create your own API for the aws comprehend / any other api
-  should be as simpe as putting those API functions in an module.exports { } section.
-  then doing a "require" from the main file (this one).
-
-*/
-
 var handlers = {
 
   'LaunchRequest': function () {
@@ -34,7 +26,7 @@ var handlers = {
   },
 
   'AskWatson': function () {
-    //this.reponse.speak(" Asking my friend something! ");
+    // this.reponse.speak(" Asking my friend something! ");
     var returnString = HelperFunctions.getEntities();
     this.response.speak(returnString);
     this.emit(':responseReady');
