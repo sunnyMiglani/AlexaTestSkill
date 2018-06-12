@@ -1,5 +1,5 @@
 "use strict";
-
+var helperFunctions = require("./helper.js");
 var Alexa = require("alexa-sdk");
 
 /*
@@ -57,8 +57,8 @@ var handlers = {
 
   // This is a placeholder to ask questions!
   'AskWatson' : function(){
-    //some code
-    this.response.speak("Would ask watson something! ");
+    var returnString = helperFunctions.getEntities();
+    this.response.speak(returnString);
     this.emit(':responseReady');
   }
 
