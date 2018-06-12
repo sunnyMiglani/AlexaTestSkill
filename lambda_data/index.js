@@ -26,8 +26,10 @@ var handlers = {
   },
 
   'AskWatson': function () {
-    // this.reponse.speak(" Asking my friend something! ");
+    // this.response.speak("Let me ask my friend Watson!");
+    // var localCheck = HelperFunctions.checkLocal();
     var returnString = HelperFunctions.getEntities();
+    console.log(returnString);
     this.response.speak(returnString);
     this.emit(':responseReady');
   }

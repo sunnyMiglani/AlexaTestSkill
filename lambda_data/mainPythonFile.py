@@ -1,8 +1,11 @@
 # import json
-print("made it to json! ");
 # import boto3
+import sys;
+print("made it to json! ");
 
 print("made it to boto3! ");
+print("communication from python! " );
+sys.stdout.flush()
 # comprehend = boto3.client(service_name='comprehend', region_name='eu-west-1');
 # textFile = open("much_ado_about_nothing.txt", "r", encoding="utf8");
 # text = textFile.read();
@@ -20,7 +23,6 @@ print("made it to boto3! ");
 #     if(entity['Type']=="PERSON"): print(entity['Text']);
 #     # print("Entity : {0}, Type : {1}".format(entity['Text'], entity['Type']));
 
-print("communication from python! " );
 
 # print('End of DetectEntities\n')
 
