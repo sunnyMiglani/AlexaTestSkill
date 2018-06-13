@@ -41,3 +41,5 @@ This is just [to save the link for future use](http://docs.python-guide.org/en/l
 ## Testing locally rather than using AWS lambda each time:
 **Caution**: Testing locally is great if you're testing code logic, but I'd 100% recommend actually testing on lambda (even if it eventually costs) as this will ensure you don't have problems with paths. A decent system is implemented/recommended [by Amazon call SAM](https://aws.amazon.com/about-aws/whats-new/2017/08/introducing-aws-sam-local-a-cli-tool-to-test-aws-lambda-functions-locally/)
 
+## Child Process from JS to Python:
+The best guide I've found for this system [is here](https://www.sohamkamani.com/blog/2015/08/21/python-nodejs-comm/). This essentially covers the concept of creating a child process and looking at it's data out stream and I would **heavily recommend** remembering to put the stderr stream as well, otherwise you shall spend ages wondering why things weren't working!

@@ -17,7 +17,7 @@ module.exports = {
         });
         
         py.stderr.on('data', function(data){
-            console.log("ERROR : ", data);
+            console.log("ERROR : ", data.toString());
         });
 
     },
