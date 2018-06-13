@@ -9,6 +9,9 @@ module.exports = {
         var outputString = "starting string";
 
         py.stdout.on('data', function (data) {
+            if(outputString === "starting string"){
+                outputString = "";
+            }
             outputString += data.toString();
         });
 

@@ -3,8 +3,8 @@ Alexa Test Repository. Simple example and placeholders for links to APIs and Ale
 
 # Aim:
 Working Alexa skill that can 
-1.  ~~implement timers / notification as an example of handling
-time dependent events. ~~ Ignored, not needed in WP
+1. ~~implement timers / notification as an example of handling
+time dependent events.~~ Ignored, not needed in WP
 2. ~~implement an external API to return back values based on the intents given by alexa.~~ Keepin internal instead 
 3. have a database that can store information from the above API
 4. have an external system that can add data to the database from above if needed.
@@ -35,11 +35,11 @@ The overall system is essentially to create a virtual environment for the files 
 ### File paths for reading / writing
 This is basically since the scripts aren't run with the same paths you're used to in aws, the best thing [to use is this system](https://stackoverflow.com/questions/39477729/aws-lambda-read-contents-of-file-in-zip-uploaded-as-source-code?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa) which explains the pathing for the python _read_ functions.
 
-## Creating a Virtual Environment for the Python files
+### Creating a Virtual Environment for the Python files
 This is just [to save the link for future use](http://docs.python-guide.org/en/latest/dev/virtualenvs/) but the idea is outlined really well here and there's specific instructions on how to create and manage a virtual environment.
 
-## Testing locally rather than using AWS lambda each time:
+### Testing locally rather than using AWS lambda each time:
 **Caution**: Testing locally is great if you're testing code logic, but I'd 100% recommend actually testing on lambda (even if it eventually costs) as this will ensure you don't have problems with paths. A decent system is implemented/recommended [by Amazon call SAM](https://aws.amazon.com/about-aws/whats-new/2017/08/introducing-aws-sam-local-a-cli-tool-to-test-aws-lambda-functions-locally/)
 
-## Child Process from JS to Python:
+### Child Process from JS to Python:
 The best guide I've found for this system [is here](https://www.sohamkamani.com/blog/2015/08/21/python-nodejs-comm/). This essentially covers the concept of creating a child process and looking at it's data out stream and I would **heavily recommend** remembering to put the stderr stream as well, otherwise you shall spend ages wondering why things weren't working!
