@@ -16,6 +16,9 @@ module.exports = {
             callbackFunction(outputString, that);
         });
         
+        py.stderr.on('data', function(data){
+            console.log("ERROR : ", data);
+        });
 
     },
 
