@@ -25,3 +25,19 @@ time dependent events. ~~ Ignored, not needed in WP
 To link any API : Basically create your own API for the aws comprehend / any other api
   should be as simpe as putting those API functions in an module.exports { } section.
   then doing a "require" from the main file (this one).
+
+# Guides
+
+### Adding a python script + related libraries.
+The best example to follow [is here](https://docs.aws.amazon.com/lambda/latest/dg/with-s3-example-deployment-pkg.html#with-s3-example-deployment-pkg-python).
+The overall system is essentially to create a virtual environment for the files to run in, and you zip the related libraries **at the same level** as the script.
+
+### File paths for reading / writing
+This is basically since the scripts aren't run with the same paths you're used to in aws, the best thing [to use is this system](https://stackoverflow.com/questions/39477729/aws-lambda-read-contents-of-file-in-zip-uploaded-as-source-code?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa) which explains the pathing for the python _read_ functions.
+
+## Creating a Virtual Environment for the Python files
+This is just [to save the link for future use](http://docs.python-guide.org/en/latest/dev/virtualenvs/) but the idea is outlined really well here and there's specific instructions on how to create and manage a virtual environment.
+
+## Testing locally rather than using AWS lambda each time:
+**Caution**: Testing locally is great if you're testing code logic, but I'd 100% recommend actually testing on lambda (even if it eventually costs) as this will ensure you don't have problems with paths. A decent system is implemented/recommended [by Amazon call SAM](https://aws.amazon.com/about-aws/whats-new/2017/08/introducing-aws-sam-local-a-cli-tool-to-test-aws-lambda-functions-locally/)
+
