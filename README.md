@@ -1,6 +1,15 @@
 # AlexaTestSkill
 Alexa Test Repository. Simple example and placeholders for links to APIs and Alexa Intents.
 
+# Front-End How to Use:
+These are some details on the front end for using this app.
+Example questions are as follows:
+1. "Tell me the main characters" -- Entities
+2. "How do you feel about it?" -- Sentiments
+3. "Quote something for me." -- Key Phrases
+
+
+
 # Aim:
 Working Alexa skill that can 
 1. ~~implement timers / notification as an example of handling

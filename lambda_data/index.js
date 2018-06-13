@@ -25,11 +25,23 @@ var handlers = {
     this.emit(':responseReady');
   },
 
-  'AskWatson': function () {
-    // this.response.speak("Let me ask my friend Watson!");
-    // var localCheck = HelperFunctions.checkLocal();
+  'AskCharacters': function () {
     HelperFunctions.getEntities(function(returnString,that){
       that.response.speak("The main characters in Much Ado About Nothing are : " + returnString);
+      that.emit(':responseReady');
+    }, this);
+  },
+
+  'AskPhrase': function(){
+    HelperFunctions.getPhrase(function(returnString,that) {
+      that.response.speak("Quoting from the play: "+returnString);
+      that.emit(':responseReady');
+    }, this);
+  },
+
+  'AskSentiment': function(){
+    HelperFunctions.getSentiment(function(returnString,that) {
+      that.response.speak(returnString);
       that.emit(':responseReady');
     }, this);
   }
