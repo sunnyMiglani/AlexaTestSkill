@@ -27,7 +27,7 @@ for entity in dictResponse['Entities']:
             continue;
 
 for person in listOfEntities:
-    print(person);
+    print(person+",");
 
 sys.stdout.flush()
 
