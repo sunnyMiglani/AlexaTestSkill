@@ -12,7 +12,7 @@ time dependent events. ~~ Ignored, not needed in WP
 # TODO
 1. ~~Add lambda code from AWS's console.~~ DONE
 2. ~~Link ask-cli / aws-cli to upload and test different scripts.~~ DONE
-3. Create unit tests for simple intent calls.
+3. ~~Create unit tests for simple intent calls.~~ DONE on AWS Lambda. 
 4. Link a simple API to the alexa calls.
 5. Create a list of placeholders for any possible future API calls
 
