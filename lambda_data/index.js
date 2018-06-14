@@ -35,8 +35,10 @@ var handlers = {
   },
 
   'AskSentiment' : function() {
-    this.response.speak("I feel.. like there's no code here");
-    this.emit(':responseReady');
+    HelperFunctions.getSent(function (returnString, that) {
+      that.response.speak(returnString);
+      that.emit(':responseReady');
+    }, this);
   },
 
   'AskPhrase': function () {

@@ -5,7 +5,7 @@ module.exports = {
 
     getEntities: function(callbackFunction, that){
         var spawn = require('child_process').spawn;
-        var py = spawn('python', ['mainPythonFile.py']);
+        var py = spawn('python', ['getCharacters.py']);
         var outputString = "starting string";
 
         py.stdout.on('data', function (data) {
@@ -47,5 +47,26 @@ module.exports = {
             return output;
         });
         return outputString;
+    },
+
+    getSent : function(callbackFunction, that){
+        var spawn = require('child_process').spawn;
+        var py = spawn('python', ['getSent.py']);
+        var outputString = "I have no feeling about this!";
+
+        py.stdout.on('data', function (data) {
+            if (outputString === "I have no feeling about this!") {
+                outputString = "";
+            }
+            outputString += data.toString();
+        });
+
+        py.stdout.on('end', function () {
+            callbackFunction(outputString, that);
+        });
+
+        py.stderr.on('data', function (data) {
+            console.log("ERROR : ", data.toString());
+        });  
     },
 };
