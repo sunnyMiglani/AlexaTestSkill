@@ -1,0 +1,107 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "big shakespeare",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "what do i do",
+                        "help me",
+                        "help",
+                        "what",
+                        "hello",
+                        "what can i do",
+                        "how do i do this"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "HelloIntent",
+                    "slots": [],
+                    "samples": [
+                        "hey",
+                        "hello",
+                        "How's it going",
+                        "How are you",
+                        "Hi"
+                    ]
+                },
+                {
+                    "name": "AskCharacters",
+                    "slots": [],
+                    "samples": [
+                        "who are the main characters",
+                        "what are the main characters",
+                        "who is in the play",
+                        "Who was in the play"
+                    ]
+                },
+                {
+                    "name": "AskSentiment",
+                    "slots": [],
+                    "samples": [
+                        "how does this make you feel",
+                        "feel about this",
+                        "what do others feel about this",
+                        "How do you feel about this"
+                    ]
+                },
+                {
+                    "name": "AskPhrase",
+                    "slots": [],
+                    "samples": [
+                        "tell me something",
+                        "tell me something from it ",
+                        "quote it",
+                        "Quote something"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "programmingLanguageType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "css"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "html"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ruby"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "javascript"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "java"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "python"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
