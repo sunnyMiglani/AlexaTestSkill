@@ -35,20 +35,6 @@ module.exports = {
         return " Found Local Files! ";
     },
 
-    execGetEntities : function(){
-        var exec = require('child_process').exec;
-        var outputString = "oh nooo";
-        exec('pwd',function(err, stdout, stderr){
-            if(err !== null){
-                console.log("error in exec");
-            }
-            console.log("outputting from exec ", stdout);
-            outputString = stdout;
-            return output;
-        });
-        return outputString;
-    },
-
     getSent : function(callbackFunction, that){
         var spawn = require('child_process').spawn;
         var py = spawn('python', ['getSent.py']);

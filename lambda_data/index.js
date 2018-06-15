@@ -5,23 +5,24 @@ var HelperFunctions = require("./helper.js");
 var handlers = {
 
   'LaunchRequest': function () {
-    this.response.speak("Hello, welcome to Potato Timer! This is a placeholder skill to test timers and watson. Ask for help if you want to know more!").listen("You can say things like help or ask watson!");
+    this.response.speak("Hello! Welcome to BIG Shakespeare! If you'd like some instructions ask for help! ").listen("You can say things like help or ask shakespeare questions about his play Much Ado about Nothing");
     this.emit(':responseReady');
   },
 
   'HelloIntent': function () {
-    this.response.speak("This is the hello intent, try telling alexa to open this app rather than saying hello");
+    this.response.speak("Hi I'm Shakespeare, ask me for help if you'd like to know what's possible!").listen();
     this.emit(':responseReady');
   },
 
   'AMAZON.HelpIntent': function () {
-    this.response.speak("To use Potato Timer, Try asking to start a timer or ask watson something by saying Ask Watson ").listen("Seems like you didn't say anything. Ask Watson something!");
+    this.response.speak("BIG Shakespeare knows a good amount about his play Much Ado About Nothing\
+    you can ask questions like 'who were the main characters' or 'how did you feel about this play'").listen("Seems like you didn't say anything. Ask for help again if you'd like!");
     this.emit(':responseReady');
 
   },
 
   'AMAZON.StopIntent': function () {
-    this.response.speak("Goodbye! From me");
+    this.response.speak("Goodbye! From BIG Shakespeare!");
     this.emit(':responseReady');
   },
 
