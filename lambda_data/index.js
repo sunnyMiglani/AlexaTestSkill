@@ -1,6 +1,7 @@
 "use strict";
 const Alexa = require('alexa-sdk');
 var HelperFunctions = require("./helper.js");
+const ssmlMediumBreak = "<break time = '0.3s' />";
 
 var handlers = {
 
@@ -28,11 +29,12 @@ var handlers = {
 
   'AskCharacters': function () {
     // this.response.speak("Let me ask my friend Watson!");
-    // var localCheck = HelperFunctions.checkLocal();
     HelperFunctions.getEntities(function(returnString,that){
       that.response.speak("The main characters in Much Ado About Nothing are : " + returnString);
       that.emit(':responseReady');
     }, this);
+    this.response.speak("Let me ask my friend Watson! <audio src='https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_human_walking_02.mp3' />");
+    this.emit(':responseReady');
   },
 
   'AskSentiment' : function() {
@@ -45,8 +47,7 @@ var handlers = {
   'AskPhrase': function () {
     this.response.speak("I feel.. like there's no code here");
     this.emit(':responseReady');
-  }
-
+  },
 };
 
 exports.handler = function (event, context, callback) {

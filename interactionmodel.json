@@ -65,43 +65,7 @@
                     ]
                 }
             ],
-            "types": [
-                {
-                    "name": "programmingLanguageType",
-                    "values": [
-                        {
-                            "name": {
-                                "value": "css"
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "html"
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "ruby"
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "javascript"
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "java"
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "python"
-                            }
-                        }
-                    ]
-                }
-            ]
+            "types": []
         }
     }
 }
