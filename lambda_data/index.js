@@ -28,13 +28,12 @@ var handlers = {
   },
 
   'AskCharacters': function () {
+    
     // this.response.speak("Let me ask my friend Watson!");
     HelperFunctions.getEntities(function(returnString,that){
-      that.response.speak("The main characters in Much Ado About Nothing are : " + returnString);
+      that.response.speak("Let me ask my friend Watson! <audio src='https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_human_walking_02.mp3' />"+ "The main characters in Much Ado About Nothing are : " + returnString);
       that.emit(':responseReady');
     }, this);
-    this.response.speak("Let me ask my friend Watson! <audio src='https://s3.amazonaws.com/ask-soundlibrary/human/amzn_sfx_human_walking_02.mp3' />");
-    this.emit(':responseReady');
   },
 
   'AskSentiment' : function() {
